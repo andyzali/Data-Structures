@@ -12,13 +12,12 @@ LinkedQueue.prototype.makeNode = function(value) {
 
 LinkedQueue.prototype.enqueue = function(value) {
   if (this.head === null) {
-    this.head = this.makeNode();
+    this.head = this.makeNode(value);
     this.tail = this.head;
   } else {
-    this.tail.next = this.makeNode();
+    this.tail.next = this.makeNode(value);
     this.tail = this.tail.next;
   }
-  this.tail.data = value;
 };
 
 LinkedQueue.prototype.dequeue = function() {
